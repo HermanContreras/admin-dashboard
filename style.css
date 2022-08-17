@@ -1,0 +1,106 @@
+/* borders to see boxes 
+.header,
+.sidebar, 
+.main {
+  border: 2px solid;
+}
+*/
+
+body {
+  display: grid;
+  grid-template: 1fr 5fr / 1fr 4fr;
+  margin: 0px;
+  min-width: 830px;
+}
+
+.header,
+.main {
+  grid-column: 2 / -1;
+}
+
+.header {
+  grid-row: 1 / 2;
+}
+
+.sidebar {
+  height: 100vh;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  gap: 24px;
+
+  background-color: coral;
+}
+
+.sidebar,
+.sidebar .nav,
+.sidebar .extra,
+.helloUser {
+  display: flex;
+}
+
+.sidebar,
+.sidebar > * {
+  flex-direction: column;
+}
+
+.sidebar > * {
+  margin: 12px;
+}
+
+.header {
+  display: grid;
+  grid-template: 1fr 1.5fr / 3fr 1fr;
+
+  background-color: orchid;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main > p {
+  display: block;
+}
+
+.yourProjects {
+  margin-left: 12px;
+}
+
+h2 {
+  margin: 16px 0px 8px 0px;
+}
+
+.projects {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+
+.project {
+  height: 200px;
+  background-color: gray;
+}
+
+.new {
+  margin-right: 12px;
+}
+
+.new .card {
+  background-color: gray;
+  height: 300px;
+  width: 200px;
+  margin-left: 24px;
+}
+
+.new h2 {
+  margin-left: 24px;
+}
+
+.main {
+  background-color: paleturquoise;
+}
+
+
+
